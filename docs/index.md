@@ -1,8 +1,6 @@
 ---
 title: Bradley Pollock
-tags:
-- Edited tag 1
-- Edited tag 2
+
 ---
 
 ## Report and Datasheet Website
