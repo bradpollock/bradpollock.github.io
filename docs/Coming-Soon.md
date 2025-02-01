@@ -40,14 +40,3 @@ stateDiagram-v2
     State4 --> [*]
 ```
 
-<object data="https://github.com/user-attachments/files/18627714/Block.Diagram-314.drawio.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/user-attachments/files/18627714/Block.Diagram-314.drawio.pdf">
-    </embed>
-</object>
-
-<object data="https://github.com/user-attachments/files/18627714/Block.Diagram-314.drawio.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/user-attachments/files/18627714/Block.Diagram-314.drawio.pdf">
-    </embed>
-</object>
-
-[Block.Diagram-314.drawio.pdf](https://github.com/user-attachments/files/18627714/Block.Diagram-314.drawio.pdf)
