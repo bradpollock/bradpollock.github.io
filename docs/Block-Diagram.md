@@ -4,15 +4,8 @@ title: Block Diagram
 
 Behold: The stepper motor subsystem Block Diagram
 
-![PDF](https://github.com/user-attachments/files/18627602/Block.Diagram-314.drawio.pdf)
+![Just in Case](https://github.com/user-attachments/assets/1b2ce3e3-70c9-4ee5-90dd-960093764ac6)
 
-<object data="{{ [pdf_file](https://github.com/user-attachments/files/18627602/Block.Diagram-314.drawio.pdf) }}" type="application/pdf">
-    <embed src="{{ [pdf_file](https://github.com/user-attachments/files/18627602/Block.Diagram-314.drawio.pdf) }}" type="application/pdf" />
-</object>
-
-<object data="{{ [pdf_file](https://github.com/user-attachments/files/18627648/Block.Diagram-314.drawio.pdf) }}" type="application/pdf">
-    <embed src="{{ [pdf_file](https://github.com/user-attachments/files/18627648/Block.Diagram-314.drawio.pdf) }}" type="application/pdf" />
-</object>
 
 
 PDF Available [Here](https://github.com/user-attachments/files/18627602/Block.Diagram-314.drawio.pdf)
