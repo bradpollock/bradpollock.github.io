@@ -3,16 +3,11 @@ title: Bradley Pollock
 
 ---
 
-## Report and Datasheet Website
+# Report and Datasheet Website
 
-Testing, Testing
+Welcome to the home page of the living report website for Bradley Pollock
 
-- Hello World!
+## Important Links:
 
-1. Start Project
+[Block Diagram](https://bradpollock.github.io/Block-Diagram/) (See Above)
 
-name | description
------|------
-Test| Des test
-
-1.
