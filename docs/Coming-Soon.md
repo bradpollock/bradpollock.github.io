@@ -1,5 +1,5 @@
 ---
-title: Charts
+title: Coming Soon!
 ---
 
 ## testing, testing
