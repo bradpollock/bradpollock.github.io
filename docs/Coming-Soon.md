@@ -4,7 +4,7 @@ title: Charts
 
 ## testing, testing
 
-Example text for Tony
+
 
 ``` mermaid
 graph LR
