@@ -10,7 +10,7 @@ The following devices were researched: **Stepper motors** and **Stepper motor dr
 
 | **Stepper Motor** | **Pros/Cons** |
 |---|---|
-| **Device 1:** name<br> ![alt](../docs/static/media/NCV7708FDWR2G.png) | **Pros:**<br>-Bla <br>-bla <br> **Cons:**<br>-Bla<br>-bla|
+| **Device 1:** name<br> ![alt](../docs/static/NCV7708FDWR2G.png) | **Pros:**<br>-Bla <br>-bla <br> **Cons:**<br>-Bla<br>-bla|
 | **Device 2:** name<br>(image) | **Pros:**<br>-Bla <br>-bla <br> **Cons:**<br>-Bla<br>-bla|
 | **Device 3:** name<br>(image) | **Pros:**<br>-Bla <br>-bla <br> **Cons:**<br>-Bla<br>-bla|
 
