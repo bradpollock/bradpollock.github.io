@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bradpollock.github.io/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/Block-Diagram/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/Component-Selection/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/static/node_modules/mathjax/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/subfolder/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/subfolder/another-subfile/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
