@@ -490,6 +490,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stepper-motors" class="md-nav__link">
+    Stepper Motors
+  </a>
+  
+    <nav class="md-nav" aria-label="Stepper Motors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-product-1-mikroelektronika-mikroe-1530-5v-tepper-motor" class="md-nav__link">
+    Decision: Product #1: MikroElektronika MIKROE-1530 5V tepper motor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepper-motor-drivers" class="md-nav__link">
+    Stepper Motor Drivers
+  </a>
+  
+    <nav class="md-nav" aria-label="Stepper Motor Drivers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-device-3-infineon-btm9011epxuma1" class="md-nav__link">
+    Decision: Device 3: Infineon BTM9011EPXUMA1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -518,6 +558,7 @@
 <h2 id="selection-process">Selection Process</h2>
 <p>Products were selected based on usability and the perceivable ease which they will be integrated on a surface-mount PCB.</p>
 <p>The following devices were researched: <strong>Stepper motors</strong> and <strong>Stepper motor drivers</strong>.</p>
+<h2 id="stepper-motors">Stepper Motors</h2>
 <table>
 <thead>
 <tr>
@@ -527,19 +568,22 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Device 1:</strong> name<br> <a class="glightbox" href="NCV7708FDWR2G.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="NCV7708FDWR2G.png" /></a></td>
-<td><strong>Pros:</strong><br>-Bla <br>-bla <br> <strong>Cons:</strong><br>-Bla<br>-bla</td>
+<td><strong>Device 1</strong>: MikroElektronika MIKROE-1530 5V tepper motor <br><a class="glightbox" href="MIKROE-1530.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image of IC" src="MIKROE-1530.png" /></a><br><a href="https://www.digikey.com/en/products/detail/mikroelektronika/MIKROE-1530/5724295">DigiKey</a> <a href="https://download.mikroe.com/documents/datasheets/step-motor-5v-28byj48-datasheet.pdf"><em>Datasheet</em></a> <strong>Cost: $9.60/unit</strong></td>
+<td><strong>Pros:</strong><br> - Extremely common and well-documented by oustide sources <br> - Very fine resolution<br> <strong>Cons:</strong><br> - Simplistic datasheet<br> - Wire come pre-connected to header (extra header or electric work needed to integrate).</td>
 </tr>
 <tr>
-<td><strong>Device 2:</strong> name<br>(image)</td>
-<td><strong>Pros:</strong><br>-Bla <br>-bla <br> <strong>Cons:</strong><br>-Bla<br>-bla</td>
+<td><strong>Device 2</strong>: Pololu 1207 Bipolar stepper motor<br><a class="glightbox" href="image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image of IC" src="image.png" /></a><br><a href="https://www.digikey.com/en/products/detail/pololu/1207/10449950">DigiKey</a> <a href="https://www.pololu.com/product-info-merged/1207"><em>Datasheet</em></a> <strong>Cost: $19.40/unit</strong></td>
+<td><strong>Pros:</strong><br> - Higher voltage motor <br> - Easy mounting profile <br> <strong>Cons:</strong><br> - Datasheet does not contain safety information (absolute maximum ratings)<br> - Higher price point</td>
 </tr>
 <tr>
-<td><strong>Device 3:</strong> name<br>(image)</td>
-<td><strong>Pros:</strong><br>-Bla <br>-bla <br> <strong>Cons:</strong><br>-Bla<br>-bla</td>
+<td><strong>Device 3</strong>: Pololu 1209<br><a class="glightbox" href="image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image of IC" src="image-1.png" /></a><br><a href="https://www.digikey.com/en/products/detail/pololu/1209/10449952">DigiKey</a> <a href="https://www.pololu.com/product-info-merged/1209"><em>Datasheet</em></a> <strong>Cost: $22.75/unit</strong></td>
+<td><strong>Pros:</strong><br> - Higher running current takes advantage of barrel power supply (provides higher holding torque) <br> - Convenient mounting profile<br> <strong>Cons:</strong><br> - Similar datasheet issues to the Pololu 1207 <br> - Lower rated voltage</td>
 </tr>
 </tbody>
 </table>
+<h3 id="decision-product-1-mikroelektronika-mikroe-1530-5v-tepper-motor">Decision: Product #1: MikroElektronika MIKROE-1530 5V tepper motor</h3>
+<p>This decision was made due to the reliability, low price point, and ubiquitous nature of this stepper motor.</p>
+<h2 id="stepper-motor-drivers">Stepper Motor Drivers</h2>
 <table>
 <thead>
 <tr>
@@ -553,15 +597,17 @@
 <td><strong>Pros:</strong><br> - Larger SOIC package size (easier assembly) <br> - Clear SPI datasheet<br> <strong>Cons:</strong><br> - Large pin count (several unused pins)<br> - No express stepper motor drive functions (the device is not expressly designed for stepper motors).</td>
 </tr>
 <tr>
-<td><strong>Device 2</strong>: name<br>(image)</td>
-<td><strong>Pros:</strong><br>-Bla <br>-bla <br> <strong>Cons:</strong><br>-Bla<br>-bla</td>
+<td><strong>Device 2</strong>: Analog Devices Inc./Maxim Integrated TMC249A-SA<br><a class="glightbox" href="TMC249A-SA.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image of IC" src="TMC249A-SA.png" /></a><br><a href="https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/TMC249A-SA/4399665">DigiKey</a> <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/TMC249_datasheet_rev2.22.pdf"><em>Datasheet</em></a> <strong>Cost: $16.64/unit</strong></td>
+<td><strong>Pros:</strong><br> - Explicit and easy-to-read datasheet <br> - Serial control is a major design influence <br> <strong>Cons:</strong><br> - High Unit Price (over 1/6 of budget)<br> - Large pin count (difficult to solder)</td>
 </tr>
 <tr>
-<td><strong>Device 3</strong>: name<br>(image)</td>
-<td><strong>Pros:</strong><br>-Bla <br>-bla <br> <strong>Cons:</strong><br>-Bla<br>-bla</td>
+<td><strong>Device 3</strong>: Infineon BTM9011EPXUMA1<br><a class="glightbox" href="BTM9011EPXUMA1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image of IC" src="BTM9011EPXUMA1.png" /></a><br><a href="https://www.digikey.com/en/products/detail/infineon-technologies/BTM9011EPXUMA1/25702022">DigiKey</a> <a href="https://www.infineon.com/dgdl/Infineon-Infineon-BTM901xEP-DS-v01_00-EN-DataSheet-v01_00-EN.pdf?fileId=8ac78c8c90530b3a01912d365ee4326f"><em>Datasheet</em></a> <strong>Cost: $1.95/unit</strong></td>
+<td><strong>Pros:</strong><br> - Simple H-bridge layout <br> - Extremely cost effective <br> - Small pin count<br> <strong>Cons:</strong><br> - Would require multiple units to drive a stepper motor <br> - Large pin count (difficult to solder)</td>
 </tr>
 </tbody>
 </table>
+<h3 id="decision-device-3-infineon-btm9011epxuma1">Decision: Device 3: Infineon BTM9011EPXUMA1</h3>
+<p>This device, though requiring multiple chips for full functionality, is more straightforward to implement. The low price point also allows the purchase of several extra units in case of design failure.</p>
 
 
 
