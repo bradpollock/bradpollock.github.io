@@ -11,4 +11,4 @@ Welcome to the home page of the living report website for Bradley Pollock
 
 [Block Diagram](https://bradpollock.github.io/Block-Diagram/)
 
-[Component Selection](https://bradpollock.github.io/Component-Selection/Component-Selection/)
+[Component Selection](https://bradpollock.github.io/Component-Selection/Component-Selection-Process/)
