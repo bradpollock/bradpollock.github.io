@@ -6,4 +6,4 @@ title: Schematic Design
 
 ![Schematic Design](static/media/Schematic_Design_Feb22.png)
 
-PDF Download Available [*here*](static/media/Schematic_Design_Feb22.png)
+PDF available [*here*](static/media/BPollock_Subsystem_Schematic.pdf)
