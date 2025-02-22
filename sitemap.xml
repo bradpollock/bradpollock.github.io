@@ -25,14 +25,4 @@
          <lastmod>2025-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
-    <url>
-         <loc>https://bradpollock.github.io/subfolder/</loc>
-         <lastmod>2025-02-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bradpollock.github.io/subfolder/another-subfile/</loc>
-         <lastmod>2025-02-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
 </urlset>
