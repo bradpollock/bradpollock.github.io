@@ -13,4 +13,4 @@ Welcome to the home page of the living report website for Bradley Pollock
 
 [Component Selection](https://bradpollock.github.io/Component-Selection/Component-Selection-Process/)
 
-[Schematic Design](https://bradpollock.github.io/Schematic-Design/)
+[Schematic Design](https://bradpollock.github.io/Schematic-Design/Schematic-Design/)
