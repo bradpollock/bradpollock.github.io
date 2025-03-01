@@ -819,9 +819,7 @@ x:publishsource="Excel">
   <td width=240 style='width:180pt'></td>
  </tr>
  <![endif]>
-</table>
 
-</div>
 
 
 
