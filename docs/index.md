@@ -7,6 +7,9 @@ title: Welcome Page
 
 Welcome to the home page of the living report website for Bradley Pollock
 
+### **Back to Team Website**
+>Click [here](https://asu-egr314-2025-s-201.github.io/) to return to the Team 201 Team Report site.
+
 ### Important Milestones (See links for more detail)
 
 **Block Diagram** - [*link*](https://bradpollock.github.io/Block-Diagram/)
@@ -21,5 +24,7 @@ Welcome to the home page of the living report website for Bradley Pollock
 
 - Full electrical schematic complete with part numbers and header info.
 
-### **Team Website**
->Click [here](https://asu-egr314-2025-s-201.github.io/) to return to the Team 201 Team Report site.
+**Bill of Materials** - [*link*](https://bradpollock.github.io/Bill-of-Materials/Bill-of-Materials/)
+
+- Each and every component used in this subsystem in an organized table. Purchase order info is also housed here.
+
