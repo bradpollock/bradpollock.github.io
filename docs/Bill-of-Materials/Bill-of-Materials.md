@@ -9,15 +9,15 @@ The following table depicts each and every part currently needed for the design 
 
 
 **Table 1: Bill of Materials** 
-![Bill of Materials](<Bill of Materials_BPollock_sorted.xlsb.htm>)
+![Bill of Materials](Bill-of-Materials_BPollock_sorted.pdf)
 
 
-*The above table is available [here](docs/Bill-of-Materials/Bill of Materials_BPollock_sorted.xlsb.xlsx).
+*The above table is available [here](Bill-of-Materials_BPollock_sorted.xlsb.xlsx).
 
 # Purchase Order
 
 The following file is the purchase order sent to professor Dan Aukes on the 28th of February, 2025. Parts were exclusively ordered from DigiKey.
 
-Download available [*here*](docs/Bill-of-Materials/BPollock_Purchase_Request_DigiKey.xlsx)
+Download available [*here*](BPollock_Purchase_Request_DigiKey.xlsx)
 
 
