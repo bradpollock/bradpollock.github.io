@@ -822,8 +822,6 @@ x:publishsource="Excel">
 </table>
 
 </div>
-![Text](BOM.png)
-
 
 *The above table is available [here](Bill-of-Materials_BPollock_sorted.xlsb.xlsx).
 
