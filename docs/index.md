@@ -5,7 +5,7 @@ title: Welcome to Bradley Pollock's Datasheet Site
 
 ## Report and Datasheet Website
 
-Welcome to the home page of the living report website for Bradley Pollock
+Welcome!
 
 ### **Back to Team Website**
 >Click [here](https://asu-egr314-2025-s-201.github.io/) to return to the Team 201 Team Report site.
