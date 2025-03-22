@@ -2,32 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bradpollock.github.io/</loc>
-         <lastmod>2025-03-05</lastmod>
+         <lastmod>2025-03-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bradpollock.github.io/API/</loc>
+         <lastmod>2025-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/Block-Diagram/</loc>
-         <lastmod>2025-03-05</lastmod>
+         <lastmod>2025-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/Bill-of-Materials/Bill-of-Materials/</loc>
-         <lastmod>2025-03-05</lastmod>
+         <lastmod>2025-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/Component-Selection/Component-Selection-Process/</loc>
-         <lastmod>2025-03-05</lastmod>
+         <lastmod>2025-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/Schematic-Design/Schematic-Design/</loc>
-         <lastmod>2025-03-05</lastmod>
+         <lastmod>2025-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bradpollock.github.io/static/node_modules/mathjax/</loc>
-         <lastmod>2025-03-05</lastmod>
+         <lastmod>2025-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
