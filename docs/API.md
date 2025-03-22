@@ -27,6 +27,7 @@ The following is the API for the stepper motor subsystem. This includes messages
 | 0x01             | Online      |
 | 0x02             | Waiting     |
 | 0x03             | Error       |
+
 >Note: Team 201 is currently assembling and testing their respective subsystems, and is in the process of identifying, cataloging, and typifying device error states. As such, this page will be updated in time to reflect valid error states.
 
 ## Message Type 1: Drive Mode 
@@ -40,6 +41,7 @@ The following is the API for the stepper motor subsystem. This includes messages
 |Example  | 2         | 1        |
 
 **Key to drive mode messages**  
+
 | Byte 3 (uint8_t) | Description |
 |------------------|-------------|
 | 0x00             | Automatic   |
@@ -56,6 +58,7 @@ The following is the API for the stepper motor subsystem. This includes messages
 |Example  | 2         | 1        |
 
 **Key to sensor data messages**
+
 | Byte 3 (uint8_t) | Description |
 |------------------|-------------|
 | 0x00             | Orange         |
@@ -73,6 +76,7 @@ The following is the API for the stepper motor subsystem. This includes messages
 |Example  | 2          | 2      |
 
 **Key to path selection messages:**
+
 | Byte 3 (uint8_t) | Description |
 |------------------|-------------|
 | 0x00             | left        |
