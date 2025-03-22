@@ -21,6 +21,7 @@ The following is the API for the stepper motor subsystem. This includes messages
 |Example  | 0        | 2       |
 
 **Key to status code messages:** 
+
 | Byte 3 (uint8_t) | Description |
 |------------------|-------------|
 | 0x00             | Offline     |
