@@ -4,9 +4,13 @@ title: Schematic
 
 ## Stepper Motor Subsystem Schematic
 The following schematic was designed using Cadence Capture CIS. (Downloads Below)
->Feb 28th Update: Part Reference designators have been updated, power indicator LED has been added.
+>April 16 Update: Flyback protection diodes have been added.
 
 ![Schematic Design](Schematic_Design_Mar10.png)
+
+![PCB Design: Top Layer](PCB_Top_4.16.2025.png)
+
+![PCB Design: Bottom Layer](PCB_Bottom_4.16.2025.png)
 
 PDF available [*here*](BPollock_StepperSubsystem_Schematic_V7.pdf)
 ZIP available [*here*](BPollock_Subsystem_4.16.2025.zip)

@@ -53,7 +53,7 @@ A link to an MPLAB X project demonstrating effective message transfer will soon 
 |         |  Byte 1  |  Byte 2 |
 |---------|-----------|----------|
 |Var Name | msg_type  | color    |
-|Var Type | uint16_t  | uint8_t  | 
+|Var Type | uint8_t  | uint8_t  | 
 |Min Val  | 0         | 0        |
 |Max Val  | 3         | 2        |
 |Example  | 2         | 1        |
