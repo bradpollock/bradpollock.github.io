@@ -676,10 +676,11 @@
   <h1>API</h1>
 
 <p>The following is the API for the stepper motor subsystem. This includes messages that the subsystem must receive and interpret, but will never send, namely message type 2 and 3 (used to determine target motor position). Each message type will be utilized by the stepper motor subsystem, as message types 1-3 provide necessary information for proper device function.</p>
+<p>A link to an MPLAB X project demonstrating effective message transfer will soon be available <em>here</em>.</p>
 <table>
 <thead>
 <tr>
-<th>Message Type <br> byte 1-2 <br>(uint16_t)</th>
+<th>Message Type <br> byte 1 <br>(uint8_t)</th>
 <th>Description</th>
 <th>Sending or Recieving?</th>
 </tr>
@@ -712,8 +713,8 @@
 <thead>
 <tr>
 <th></th>
-<th>Byte 1-2</th>
-<th>Byte 3</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
 </tr>
 </thead>
 <tbody>
@@ -724,7 +725,7 @@
 </tr>
 <tr>
 <td>Var Type</td>
-<td>uint16_t</td>
+<td>uint8_t</td>
 <td>uint8_t</td>
 </tr>
 <tr>
@@ -754,33 +755,22 @@
 </thead>
 <tbody>
 <tr>
-<td>0x00</td>
-<td>Offline</td>
-</tr>
-<tr>
-<td>0x01</td>
-<td>Online</td>
-</tr>
-<tr>
-<td>0x02</td>
+<td>0x0</td>
 <td>Waiting</td>
 </tr>
 <tr>
-<td>0x03</td>
-<td>Error</td>
+<td>0x1</td>
+<td>Online</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>Note: Team 201 is currently assembling and testing their respective subsystems, and is in the process of identifying, cataloging, and typifying device error states. As such, this page will be updated in time to reflect valid error states.</p>
-</blockquote>
 <h2 id="message-type-1-drive-mode">Message Type 1: Drive Mode</h2>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Byte 1-2</th>
-<th>Byte 3</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
 </tr>
 </thead>
 <tbody>
@@ -791,7 +781,7 @@
 </tr>
 <tr>
 <td>Var Type</td>
-<td>uint16_t</td>
+<td>uint8_t</td>
 <td>uint8_t</td>
 </tr>
 <tr>
@@ -821,11 +811,11 @@
 </thead>
 <tbody>
 <tr>
-<td>0x00</td>
+<td>0x0</td>
 <td>Automatic</td>
 </tr>
 <tr>
-<td>0x01</td>
+<td>0x1</td>
 <td>Direct Drive</td>
 </tr>
 </tbody>
@@ -877,15 +867,15 @@
 </thead>
 <tbody>
 <tr>
-<td>0x00</td>
+<td>0x0</td>
 <td>Orange</td>
 </tr>
 <tr>
-<td>0x01</td>
+<td>0x1</td>
 <td>Blue</td>
 </tr>
 <tr>
-<td>0x02</td>
+<td>0x2</td>
 <td>Pink</td>
 </tr>
 </tbody>
@@ -907,7 +897,7 @@
 </tr>
 <tr>
 <td>Var Type</td>
-<td>uint16_t</td>
+<td>uint8_t</td>
 <td>uint8_t</td>
 </tr>
 <tr>
@@ -937,15 +927,15 @@
 </thead>
 <tbody>
 <tr>
-<td>0x00</td>
+<td>0x0</td>
 <td>left</td>
 </tr>
 <tr>
-<td>0x01</td>
+<td>0x1</td>
 <td>center</td>
 </tr>
 <tr>
-<td>0x02</td>
+<td>0x2</td>
 <td>right</td>
 </tr>
 </tbody>
