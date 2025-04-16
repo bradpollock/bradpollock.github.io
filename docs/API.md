@@ -24,7 +24,7 @@ A link to an MPLAB X project demonstrating effective message transfer will soon 
 
 **Key to status code messages:** 
 
-| Byte 3 (uint8_t) | Description |
+| Byte 2 (uint8_t) | Description |
 |------------------|-------------|
 | 0x0             | Waiting     |
 | 0x1             | Online      |
@@ -43,14 +43,14 @@ A link to an MPLAB X project demonstrating effective message transfer will soon 
 
 **Key to drive mode messages**  
 
-| Byte 3 (uint8_t) | Description |
+| Byte 2 (uint8_t) | Description |
 |------------------|-------------|
 | 0x0             | Automatic   |
 | 0x1             | Direct Drive|
 
 ## Message Type 2: Sensor RGB Data 
 
-|         |  Byte 1-2  |  Byte 3 |
+|         |  Byte 1  |  Byte 2 |
 |---------|-----------|----------|
 |Var Name | msg_type  | color    |
 |Var Type | uint16_t  | uint8_t  | 
@@ -60,7 +60,7 @@ A link to an MPLAB X project demonstrating effective message transfer will soon 
 
 **Key to sensor data messages**
 
-| Byte 3 (uint8_t) | Description |
+| Byte 2 (uint8_t) | Description |
 |------------------|-------------|
 | 0x0             | Orange         |
 | 0x1             | Blue       |
@@ -68,7 +68,7 @@ A link to an MPLAB X project demonstrating effective message transfer will soon 
 
 ## Message Type 3 : Path Selection  
 
-|         |  Byte 1-2  | Byte 3 |
+|         |  Byte 1  | Byte 2 |
 |---------|------------|--------|
 |Var Name | msg_type   | path   |
 |Var Type | uint8_t   | uint8_t|
@@ -78,7 +78,7 @@ A link to an MPLAB X project demonstrating effective message transfer will soon 
 
 **Key to path selection messages:**
 
-| Byte 3 (uint8_t) | Description |
+| Byte 2 (uint8_t) | Description |
 |------------------|-------------|
 | 0x0             | left        |
 | 0x1             | center      |
