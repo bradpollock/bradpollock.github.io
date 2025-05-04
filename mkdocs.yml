@@ -9,7 +9,7 @@ theme:
     primary: blue-grey
     accent: teal
   font:
-    text: Roboto
+    text: Albert Sans SemiBold
   logo: static/logo.svg
   favicon: static/Smiley.png
 
