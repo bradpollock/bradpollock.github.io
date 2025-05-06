@@ -250,6 +250,23 @@
   
   
   
+    <li class="md-tabs__item">
+      <a href="../../Resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
     
       <li class="md-tabs__item">
@@ -420,6 +437,25 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
     
     
       
@@ -513,9 +549,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -526,8 +562,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Schematic Design
           </label>
@@ -595,6 +631,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#final-design" class="md-nav__link">
+    Final Design:
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Design:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion-of-functionality" class="md-nav__link">
+    Discussion of functionality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-20" class="md-nav__link">
+    Version 2.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#power-budget" class="md-nav__link">
     Power Budget
   </a>
@@ -656,6 +719,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#final-design" class="md-nav__link">
+    Final Design:
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Design:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discussion-of-functionality" class="md-nav__link">
+    Discussion of functionality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-20" class="md-nav__link">
+    Version 2.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#power-budget" class="md-nav__link">
     Power Budget
   </a>
@@ -688,14 +778,32 @@
   <h1>Schematic Design and Power Budget</h1>
 
 <h2 id="introduction"><strong>Introduction</strong></h2>
-<p>The following page documents the final schematic, PCB, and power budget for the stepper motor subsystem. The schematic, designed in Capture CIS, features each major functional unit of the device. The power budget can be found at the bottom of the page. The power budget can also be found on the <a href="https://bradpollock.github.io/Component-Selection/Component-Selection-Process/"><em>Component selection Process</em></a> page.</p>
+<p>The following page documents the final schematic, PCB, and power budget for the stepper motor subsystem. The schematic, designed in Capture CIS, features each major functional unit of the device. The power budget can be found at the bottom of the page. The power budget can also be found on the <a href="https://bradpollock.github.io/Component-Selection/Component-Selection-Process/"><em>Component selection Process</em></a> page. For a complete bill of materials, please see <a href="https://bradpollock.github.io/Bill-of-Materials/Bill-of-Materials/"><em>Bill of Materials</em></a> above.</p>
 <h2 id="stepper-motor-subsystem-schematic"><strong>Stepper Motor Subsystem Schematic</strong></h2>
-<p>The following schematic was designed using Cadence Capture CIS. (Downloads below) As of April 16, flyback protection diodes were added in an effort to mitigate the violent shorting seen from the chosen motor driver. The final product demonstrated at the May 05 Innovation Showcase featured two of the same board used. This decision was made in an effort to isolate the motor driver circuits and protect future microcontrollers from shorting damage.</p>
+<p>The following final schematic was designed using Cadence Capture CIS. (Downloads below) As of April 16, flyback protection diodes were added in an effort to mitigate the violent shorting seen from the chosen motor driver. The final product demonstrated at the May 05 Innovation Showcase featured two of the same board used. This decision was made in an effort to isolate the motor driver circuits and protect future microcontrollers from shorting damage.</p>
+<blockquote>
+<p>Design note: The current schematic design was implemented on the final project displayed at the May 02 Innovation Showcase, though it is somewhat problematic. Prior feedback given from external reviewers (such as the need for a pull-up resistor, ICSP header compatibility, proper voltage inputs for ICs and the voltage regulator, and the ensuring of pin states on certain SPI pins) was implemented and can be seen here or in the actual project folders (ZIP found below). One issue persists despite these changes and numerous attempted workarounds, mandating a seperate board be used at final project demonstration. When the VS and OUT1 pins of either motor driver are bridged by any means while the device is powered on, there is a catastrophic and irreversible short generated. This short was the cause of unusability for at least one microcontroller, and remains a reason for great concern. No root cause was found for the short, and as such the current workaround is the use of two seperate boards, allowing power to be isolated between the microcontroller and motor drivers. For an analysis of this issue, see the <a href="https://asu-egr314-2025-s-201.github.io/06-Reflection/"><em>Reflections</em></a> page of Team 201's product</p>
+</blockquote>
+<p>Schematic Design:</p>
 <p><a class="glightbox" href="../Schematic_Design_Mar10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Schematic Design" src="../Schematic_Design_Mar10.png" /></a></p>
-<p><a class="glightbox" href="../PCB_Top_4.16.2025.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PCB Design: Top Layer" src="../PCB_Top_4.16.2025.png" /></a></p>
-<p><a class="glightbox" href="../PCB_Bottom_4.16.2025.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PCB Design: Bottom Layer" src="../PCB_Bottom_4.16.2025.png" /></a></p>
+<p>PCB Design: Top Layer</p>
+<p><a class="glightbox" href="../PCB_TOP_Final.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PCB Design: Top Layer" src="../PCB_TOP_Final.png" /></a></p>
+<p>PCB Design: Bottom Layer</p>
+<p><a class="glightbox" href="../PCB_Bottom_Final.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PCB Design: Bottom Layer" src="../PCB_Bottom_Final.png" /></a></p>
 <p>PDF available <a href="../BPollock_StepperSubsystem_Schematic_V7.pdf"><em>here</em></a>
 ZIP available <a href="../BPollock_Subsystem_4.16.2025.zip"><em>here</em></a></p>
+<h2 id="final-design"><strong>Final Design:</strong></h2>
+<p>Below is an image of the final PCB design implemented and displayed during the May 02 Innovation Showcase at ASU Polytechnic Campus. Note that two identical boards are used, this was done in an effort to protect microchips from shorting damage.</p>
+<p>Final PCB: Top</p>
+<p><a class="glightbox" href="../PCB_Pollock.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Top of PCB" src="../PCB_Pollock.jpg" /></a></p>
+<p>Final PCB: Bottom</p>
+<p><a class="glightbox" href="../PCB_Bottom.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bottom of PCB" src="../PCB_Bottom.jpg" /></a></p>
+<p>Final Team PCB Design:</p>
+<p><a class="glightbox" href="../Team201.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Final Team PCB" src="../Team201.png" /></a></p>
+<h3 id="discussion-of-functionality"><strong>Discussion of functionality</strong></h3>
+<p>The stepper motor subsystem supports the user needs by providing enticing motion and making the user interaction both visible and enjoyable. The stepper motor subsystem's indexing function was developed by the team in relation to the final seven design criteria to provide a simple method of sorting selected elements and/or colors to teach users about chemistry basics.</p>
+<h3 id="version-20"><strong>Version 2.0</strong></h3>
+<p>If a second version of the board would be developed, a major change would be isolated power supplies to mitigate the issues discussed earlier. It is recommended that the power system is developed first so that shorts or power problems that may occur in further use are avoided. This practice is also crucial when using current-sensitive ICs and when on-board power is used to power other system components (whether on-board or on a teammate’s board).</p>
 <h2 id="power-budget"><strong>Power Budget</strong></h2>
 <p>Below is the power budget used to determine necessary supply voltages for the project. A PDF download is available <a href="../PowerBudget.pdf"><em>here</em></a>, and a Microsoft Excel Sheet <a href="../PowerBudget.xlsx"><em>here</em></a>.</p>
 <blockquote>
