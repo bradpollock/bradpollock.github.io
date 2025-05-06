@@ -28,11 +28,11 @@ This is a welcome page acting as an introduction to the datasheet site for the s
 
 - Each and every component used in this subsystem in an organized table. Purchase order info is also housed here.
 
+**Application Programming Interface (API)** - [*link*](https://bradpollock.github.io/API/)
+
+- Message types and keys. Similar info from a team scale can be found [*here*](https://asu-egr314-2025-s-201.github.io/04-Block%20Diagram%2C%20Process%20Diagram%2C%20and%20Message%20Structure/) (team 201 API).
+
 **Resources** - [*link*](https://bradpollock.github.io/Resources/)
 
 - Cad and MPLAB X files
-
-**API**
-
-- Message types and keys. Similar info from a team scale can be found [*here*](https://asu-egr314-2025-s-201.github.io/04-Block%20Diagram%2C%20Process%20Diagram%2C%20and%20Message%20Structure/) (team 201 API).
 
