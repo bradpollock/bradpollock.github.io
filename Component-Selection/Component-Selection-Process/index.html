@@ -638,6 +638,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -812,6 +819,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -838,7 +852,7 @@
   <h1>Component Selection Process</h1>
 
 <h2 id="introduction"><strong>Introduction</strong></h2>
-<p>As defined by team 201, the purpose of this subsystem is to accurately and reliably manipulate a set of linear tracks in order to quickly and consistently sort colored spheres. It has been determined that this subsystem will thus focus on the implementation of an SPI-controlled stepper motor to manipulate the sorting mechanism. To satisfy these needs, both a <em>stepper motor</em> and a <em>stepper motor driver</em> have been benchmarked and researched (see Tables 1,2 below)</p>
+<p>As defined by team 201, the purpose of this subsystem is to accurately and reliably manipulate a set of linear tracks in order to quickly and consistently sort colored spheres. It has been determined that this subsystem will thus focus on the implementation of an SPI-controlled stepper motor to manipulate the sorting mechanism. To satisfy these needs, both a <em>stepper motor</em> and a <em>stepper motor driver</em> have been benchmarked and researched (see Tables 2, 3 below). The power budget for the project is featured at the end of the page.</p>
 <blockquote>
 <p>The following page documents and contains both <em>Major Component Benchmarking</em> and <em>Microcontroller Selection</em> tasks.</p>
 </blockquote>
@@ -1058,6 +1072,12 @@ Note that only one SPI module is used- Pins RA0, RC3, RC4, and RC5 were used (se
 </blockquote>
 <h3 id="microcontroller-rationale"><em>Microcontroller Rationale</em></h3>
 <p>The Microchip PIC18F27Q84 comes from a line of tried and true microcontrollers used in a variety of application. Though marketed as "recommended for automotive applications", the device explicitly supports the perfect amount of functionality for the applications listed in the introduction to this page. The presence of an extra SPI module brings peace of mind in the event that it becomes difficult to control multiple motor drivers from the same SPI line. Additionally, the device currently boasts at least ten additional I/O pins that can be used to enable a variety of "bonus" functions, such as debugging LED indicators, extra motor drivers, or sphere-indexing servo motors. The low price point is another excellent feature of the PIC18F27Q84, lending itself well to a healthy, mistake-friendly development process.</p>
+<h2 id="power-budget"><strong>Power Budget</strong></h2>
+<p>Below is the power budget used to determine necessary supply voltages for the project. A PDF download is available <a href="../PowerBudget.pdf"><em>here</em></a>, and a Microsoft Excel Sheet <a href="../PowerBudget.xlsx"><em>here</em></a>.</p>
+<blockquote>
+<p>Updates made: Changes made to the power budget were mostly clerical in nature (increasing resolution and replacing part numbers and values from various components changed as the project took its final form). One major change to note is an increase of the overall supply voltage from +5 volts DC to +12 V DC. This was done for two main reasons: project requirements dictate a supply within the 9-12V range, and the final motor selected requires 12 volts. In choosing minor components, an inductor used to service a 3.3V switching regulator was chosen based on a necessity of at least 3 amps of current. Further changes and research shows that this was unnecessary, but the choice has yet to prove problematic. An oscilloscope reading of the +3.3V line appears clean and safe.</p>
+</blockquote>
+<p><a class="glightbox" href="../PowerBudget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Power Budget" src="../PowerBudget.png" /></a></p>
 
 
 
@@ -1102,13 +1122,13 @@ Note that only one SPI module is used- Pins RA0, RC3, RC4, and RC5 were used (se
         
         
           
-          <a href="../../Schematic-Design/Schematic-Design/" class="md-footer__link md-footer__link--next" aria-label="Next: Schematic" rel="next">
+          <a href="../../Schematic-Design/Schematic-Design/" class="md-footer__link md-footer__link--next" aria-label="Next: Schematic Design and Power Budget" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Schematic
+                Schematic Design and Power Budget
               </div>
             </div>
             <div class="md-footer__button md-icon">

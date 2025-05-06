@@ -27,7 +27,7 @@
 
     
       
-        <title>Schematic - EGR314 Report - Bradley Pollock</title>
+        <title>Schematic Design and Power Budget - EGR314 Report - Bradley Pollock</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stepper-motor-subsystem-schematic" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Schematic
+              Schematic Design and Power Budget
             
           </span>
         </div>
@@ -550,7 +550,7 @@
           
   
   <span class="md-ellipsis">
-    Schematic
+    Schematic Design and Power Budget
   </span>
   
 
@@ -561,7 +561,7 @@
         
   
   <span class="md-ellipsis">
-    Schematic
+    Schematic Design and Power Budget
   </span>
   
 
@@ -579,6 +579,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#stepper-motor-subsystem-schematic" class="md-nav__link">
@@ -635,6 +642,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stepper-motor-subsystem-schematic" class="md-nav__link">
     Stepper Motor Subsystem Schematic
   </a>
@@ -671,21 +685,23 @@
   
 
 
-  <h1>Schematic</h1>
+  <h1>Schematic Design and Power Budget</h1>
 
-<h2 id="stepper-motor-subsystem-schematic">Stepper Motor Subsystem Schematic</h2>
-<p>The following schematic was designed using Cadence Capture CIS. (Downloads Below)</p>
-<blockquote>
-<p>April 16 Update: Flyback protection diodes have been added.</p>
-</blockquote>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>The following page documents the final schematic, PCB, and power budget for the stepper motor subsystem. The schematic, designed in Capture CIS, features each major functional unit of the device. The power budget can be found at the bottom of the page. The power budget can also be found on the <a href="https://bradpollock.github.io/Component-Selection/Component-Selection-Process/"><em>Component selection Process</em></a> page.</p>
+<h2 id="stepper-motor-subsystem-schematic"><strong>Stepper Motor Subsystem Schematic</strong></h2>
+<p>The following schematic was designed using Cadence Capture CIS. (Downloads below) As of April 16, flyback protection diodes were added in an effort to mitigate the violent shorting seen from the chosen motor driver. The final product demonstrated at the May 05 Innovation Showcase featured two of the same board used. This decision was made in an effort to isolate the motor driver circuits and protect future microcontrollers from shorting damage.</p>
 <p><a class="glightbox" href="../Schematic_Design_Mar10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Schematic Design" src="../Schematic_Design_Mar10.png" /></a></p>
 <p><a class="glightbox" href="../PCB_Top_4.16.2025.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PCB Design: Top Layer" src="../PCB_Top_4.16.2025.png" /></a></p>
 <p><a class="glightbox" href="../PCB_Bottom_4.16.2025.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PCB Design: Bottom Layer" src="../PCB_Bottom_4.16.2025.png" /></a></p>
 <p>PDF available <a href="../BPollock_StepperSubsystem_Schematic_V7.pdf"><em>here</em></a>
 ZIP available <a href="../BPollock_Subsystem_4.16.2025.zip"><em>here</em></a></p>
-<h2 id="power-budget">Power Budget</h2>
-<p>Below is the power budget used to determine necessary supply voltages for the project. A PDF download is available <a href="../budget.pdf"><em>here</em></a>.</p>
-<p><a class="glightbox" href="../budget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Power Budget" src="../budget.png" /></a></p>
+<h2 id="power-budget"><strong>Power Budget</strong></h2>
+<p>Below is the power budget used to determine necessary supply voltages for the project. A PDF download is available <a href="../PowerBudget.pdf"><em>here</em></a>, and a Microsoft Excel Sheet <a href="../PowerBudget.xlsx"><em>here</em></a>.</p>
+<blockquote>
+<p>Updates made: Changes made to the power budget were mostly clerical in nature (increasing resolution and replacing part numbers and values from various components changed as the project took its final form). One major change to note is an increase of the overall supply voltage from +5 volts DC to +12 V DC. This was done for two main reasons: project requirements dictate a supply within the 9-12V range, and the final motor selected requires 12 volts. In choosing minor components, an inductor used to service a 3.3V switching regulator was chosen based on a necessity of at least 3 amps of current. Further changes and research shows that this was unnecessary, but the choice has yet to prove problematic. An oscilloscope reading of the +3.3V line appears clean and safe.</p>
+</blockquote>
+<p><a class="glightbox" href="../PowerBudget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Power Budget" src="../PowerBudget.png" /></a></p>
 
 
 
