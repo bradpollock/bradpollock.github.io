@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#message-type-0-status-code" class="md-skip">
+        <a href="#team-message-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -427,29 +427,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#message-type-0-status-code" class="md-nav__link">
-    Message Type 0: Status Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-1-drive-mode" class="md-nav__link">
-    Message Type 1: Drive Mode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-2-sensor-rgb-data" class="md-nav__link">
-    Message Type 2: Sensor RGB Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-3-path-selection" class="md-nav__link">
-    Message Type 3 : Path Selection
+  <a href="#team-message-structure" class="md-nav__link">
+    Team Message Structure
   </a>
   
 </li>
@@ -623,29 +602,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#message-type-0-status-code" class="md-nav__link">
-    Message Type 0: Status Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-1-drive-mode" class="md-nav__link">
-    Message Type 1: Drive Mode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-2-sensor-rgb-data" class="md-nav__link">
-    Message Type 2: Sensor RGB Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-3-path-selection" class="md-nav__link">
-    Message Type 3 : Path Selection
+  <a href="#team-message-structure" class="md-nav__link">
+    Team Message Structure
   </a>
   
 </li>
@@ -676,267 +634,91 @@
   <h1>API</h1>
 
 <p>The following is the API for the stepper motor subsystem. This includes messages that the subsystem must receive and interpret, but will never send, namely message type 2 and 3 (used to determine target motor position). Each message type will be utilized by the stepper motor subsystem, as message types 1-3 provide necessary information for proper device function.</p>
-<p>A link to an MPLAB X project demonstrating effective message transfer will soon be available <em>here</em>.</p>
+<p>A link to an MPLAB X project demonstrating effective message transfer is available <a href="static/media/Final_Project.X.zip">here</a>.</p>
+<p>*The following table can also be found on Team 201's communication diagram page.</p>
+<h2 id="team-message-structure"><strong>Team Message Structure</strong></h2>
+<p>UART messages are sent from team member to team member in an 8-byte format. Each byte has a specifix role, outlined in Table 1 below. </p>
+<p><em>Table 1: Message Byte Structure</em></p>
 <table>
 <thead>
 <tr>
-<th>Message Type <br> byte 1 <br>(uint8_t)</th>
-<th>Description</th>
-<th>Sending or Recieving?</th>
+<th><strong>Byte Number</strong></th>
+<th>0-1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6-7</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>Status Code</td>
-<td>Sending Globally</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Drive Mode</td>
-<td>Receiving</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Sensor Data</td>
-<td>Receiving</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Path Selection</td>
-<td>Receiving</td>
+<td><strong>Byte Contents</strong></td>
+<td>AZ</td>
+<td>Sender ID</td>
+<td>Receiver ID</td>
+<td>Message Type</td>
+<td>Message Data</td>
+<td>YB</td>
 </tr>
 </tbody>
 </table>
-<h2 id="message-type-0-status-code">Message Type 0: Status Code</h2>
+<p>The message prefix AZ and suffix YB function as a message start/stop indicator, allowing team members to efficiently filter out extraneous noise on UART lines as well as anticipate a prescribed message format. Sender and Reciever IDs (see table 2) are used to identify to which team member a message is intended, as well as provide a marker of who sent the message. This is advantageous given the daisy-chain layout of Team 201's project, as messages will be sent from member to member until they are terminated by their recipient or their sender, depending on message type (see Table 3 for Message Type IDs and their respective data).</p>
+<p><em>Table 2: Team IDs</em></p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>Byte 1</th>
-<th>Byte 2</th>
+<th>Team member (Role)</th>
+<th>Team ID</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Var Name</td>
-<td>msg_type</td>
-<td>status</td>
+<td>JC <br>(HMI)</td>
+<td>H</td>
 </tr>
 <tr>
-<td>Var Type</td>
-<td>uint8_t</td>
-<td>uint8_t</td>
+<td>Eric <br>(Sensor)</td>
+<td>S</td>
 </tr>
 <tr>
-<td>Min Val</td>
-<td>0</td>
-<td>0</td>
+<td>Marcus <br>(MQTT Server)</td>
+<td>M</td>
 </tr>
 <tr>
-<td>Max Val</td>
-<td>3</td>
-<td>3</td>
+<td>Bradley <br>(Actuator)</td>
+<td>A</td>
 </tr>
 <tr>
-<td>Example</td>
-<td>0</td>
-<td>2</td>
+<td>Broadcast <br>(sends to all members)</td>
+<td>X</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Key to status code messages:</strong> </p>
+<p><em>Table 3: Message Types and Data Structure</em></p>
 <table>
 <thead>
 <tr>
-<th>Byte 2 (uint8_t)</th>
-<th>Description</th>
+<th>Message Type (UINT8_t)</th>
+<th>Message Data info (UINT8_t)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0x0</td>
-<td>Waiting</td>
+<td><strong>Type 0: Initialization</strong> <br><strong>Message Type ID:</strong> 0x00</td>
+<td><strong>Message Contents:</strong><br>0x00 <em>Enable all systems</em></td>
 </tr>
 <tr>
-<td>0x1</td>
-<td>Online</td>
-</tr>
-</tbody>
-</table>
-<h2 id="message-type-1-drive-mode">Message Type 1: Drive Mode</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Var Name</td>
-<td>msg_type</td>
-<td>color</td>
+<td><strong>Type 1: Drive Mode</strong> <br><strong>Message Type ID:</strong> 0x01</td>
+<td><strong>Message Contents:</strong><br>0x00 <em>Autonomous Function</em><br>0x01 <em>User-Controlled Function</em></td>
 </tr>
 <tr>
-<td>Var Type</td>
-<td>uint8_t</td>
-<td>uint8_t</td>
+<td><strong>Type 2: Sensor Data</strong> <br><strong>Message Type ID:</strong> 0x02</td>
+<td><strong>Message Contents:</strong><br>0x00 <em>Sensor detects Orange</em><br>0x01 <em>Sensor detects Blue</em><br>0x02 <em>Sensor detects Pink</em></td>
 </tr>
 <tr>
-<td>Min Val</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max Val</td>
-<td>3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>2</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Key to drive mode messages</strong>  </p>
-<table>
-<thead>
-<tr>
-<th>Byte 2 (uint8_t)</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x0</td>
-<td>Automatic</td>
-</tr>
-<tr>
-<td>0x1</td>
-<td>Direct Drive</td>
-</tr>
-</tbody>
-</table>
-<h2 id="message-type-2-sensor-rgb-data">Message Type 2: Sensor RGB Data</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Var Name</td>
-<td>msg_type</td>
-<td>color</td>
-</tr>
-<tr>
-<td>Var Type</td>
-<td>uint8_t</td>
-<td>uint8_t</td>
-</tr>
-<tr>
-<td>Min Val</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max Val</td>
-<td>3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>2</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Key to sensor data messages</strong></p>
-<table>
-<thead>
-<tr>
-<th>Byte 2 (uint8_t)</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x0</td>
-<td>Orange</td>
-</tr>
-<tr>
-<td>0x1</td>
-<td>Blue</td>
-</tr>
-<tr>
-<td>0x2</td>
-<td>Pink</td>
-</tr>
-</tbody>
-</table>
-<h2 id="message-type-3-path-selection">Message Type 3 : Path Selection</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Var Name</td>
-<td>msg_type</td>
-<td>path</td>
-</tr>
-<tr>
-<td>Var Type</td>
-<td>uint8_t</td>
-<td>uint8_t</td>
-</tr>
-<tr>
-<td>Min Val</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max Val</td>
-<td>3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>2</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Key to path selection messages:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Byte 2 (uint8_t)</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x0</td>
-<td>left</td>
-</tr>
-<tr>
-<td>0x1</td>
-<td>center</td>
-</tr>
-<tr>
-<td>0x2</td>
-<td>right</td>
+<td><strong>Type 3: Path Selection</strong> <br><strong>Message Type ID:</strong> 0x03</td>
+<td><strong>Message Contents:</strong><br>0x00 <em>Orient motor Left</em><br>0x01 <em>Orient motor Right</em><br>0x02 <em>Orient motor Right</em></td>
 </tr>
 </tbody>
 </table>
