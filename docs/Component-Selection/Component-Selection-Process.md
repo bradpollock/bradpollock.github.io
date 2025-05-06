@@ -7,39 +7,53 @@ Title: Component Selection
 
 As defined by team 201, the purpose of this subsystem is to accurately and reliably manipulate a set of linear tracks in order to quickly and consistently sort colored spheres. It has been determined that this subsystem will thus focus on the implementation of an SPI-controlled stepper motor to manipulate the sorting mechanism. To satisfy these needs, both a *stepper motor* and a *stepper motor driver* have been benchmarked and researched (see Tables 1,2 below)
 
-**The following document contains both *major component benchmarking* and *Microcontroller Selection*
+>The following page documents and contains both *Major Component Benchmarking* and *Microcontroller Selection* tasks.
+
+## **Major Component Final Selections**
+
+Below is featured the final selection of stepper motor and motor driver. While the subsystem was not fully functional at the May 2 innovation showcase, there was a good deal learned in the development of the system. One major flaw in the system that has yet to be diagnosed is the sudden and irreversable device-crippling short discovered when the chosen motor driver is tested from two adjacent leads (namely VS and Output 1, see [*product datasheet*](Infineon-IFX9201SG-DS-v01_01.pdf)). The majority of feedback related to this portion of the assigment was related to the selection of the final motor driver, this being a result of a difficult search for a driver that met the unique requirements of this project (hand soldering).
+
+### **Table 1: Final Component Selection**
+
+| **Stepper Motor** | **Pros/Cons** |
+|---|---|
+| **Stepper Motor**: Fuller Motors 35BYHJ30-36A 12V Stepper Motor<br>![Image of Motor](stepper.png)<br>**Cost: $2.95/unit**<br>[Jameco](https://www.jameco.com/z/35BYHJ30-36A-Fulling-Motor-USA-Bipolar-Stepper-Motor-12VDC-259-mA-7-5-deg-48-Steps_2234476.html?CID=GOOG&gad_source=1&gclid=CjwKCAiAlPu9BhAjEiwA5NDSA3S3xKQSO3o9rV3IAYmnlmhb64g-l5FYRvc8DqAq_hisXs7W4HKWGxoCDoUQAvD_BwE) - [*Datasheet*](2234476.pdf)| **Reasons for selection:**<br> - Extremely Cost effective <br> - Convenient mounting profile<br> **Cons:**<br> - Simplistic Datasheet <br> - Large step size <br> - Higher voltage requirements|
+| **Motor Driver**: Infineon IFX9201SG<br>![Image of IC](InfineonIFX.png)<br>**Cost: $1.95/unit**<br>[DigiKey](https://www.digikey.com/en/products/detail/infineon-technologies/IFX9201SGAUMA1/5415542?s=N4IgTCBcDaIJIDEAaBOMAGAjAZQOIgF0BfIA) - [*Datasheet*](Infineon-IFX9201SG-DS-v01_01.pdf) | **Reasons for selection:**<br> - Simple H-bridge layout <br> - Extremely cost effective <br> - Small pin count<br> - Previously used- already developed <br>**Cons:**<br> - Requires multiple units to drive a stepper motor <br> - Device not specifically designed for stepper motor control|
 
 ## **Major Component Benchmarking**
 
 Products in this category were selected based on usability and the perceivable ease which they will be integrated on a surface-mount PCB. The following devices were researched: **Stepper motors** and **Stepper motor drivers**.
 
-### **Table 1: Stepper Motors**
+### **Table 2: Stepper Motors**
 
 | **Stepper Motor** | **Pros/Cons** |
 |---|---|
 | **Device 1**: MikroElektronika MIKROE-1530 5V stepper motor <br>![Image of IC](MIKROE-1530.png)<br>**Cost: $9.60/unit**<br>[DigiKey](https://www.digikey.com/en/products/detail/mikroelektronika/MIKROE-1530/5724295) - [*Datasheet*](https://download.mikroe.com/documents/datasheets/step-motor-5v-28byj48-datasheet.pdf) | **Pros:**<br> - Extremely common and well-documented by oustide sources <br> - Very fine resolution<br> **Cons:**<br> - Simplistic datasheet<br> - Wire come pre-connected to header (extra header or electric work needed to integrate).|
 | **Device 2**: Pololu 1207 Bipolar stepper motor<br>![Image of IC](image.png)<br> **Cost: $19.40/unit** <br>[DigiKey](https://www.digikey.com/en/products/detail/pololu/1207/10449950) - [*Datasheet*](https://www.pololu.com/product-info-merged/1207) | **Pros:**<br> - Higher voltage motor <br> - Easy mounting profile <br> **Cons:**<br> - Datasheet does not contain safety information (absolute maximum ratings)<br> - Higher price point|
 | **Device 3**: Pololu 1209<br>![Image of IC](image-1.png)<br>**Cost: $22.75/unit**<br>[DigiKey](https://www.digikey.com/en/products/detail/pololu/1209/10449952) - [*Datasheet*](https://www.pololu.com/product-info-merged/1209) | **Pros:**<br> - Higher running current takes advantage of barrel power supply (provides higher holding torque) <br> - Convenient mounting profile<br> **Cons:**<br> - Similar datasheet issues to the Pololu 1207 <br> - Lower rated voltage|
+| **Device 4**: Fuller Motors 35BYHJ30-36A 12V Stepper Motor<br>![Image of Motor](stepper.png)<br>**Cost: $2.95/unit**<br>[Jameco](https://www.jameco.com/z/35BYHJ30-36A-Fulling-Motor-USA-Bipolar-Stepper-Motor-12VDC-259-mA-7-5-deg-48-Steps_2234476.html?CID=GOOG&gad_source=1&gclid=CjwKCAiAlPu9BhAjEiwA5NDSA3S3xKQSO3o9rV3IAYmnlmhb64g-l5FYRvc8DqAq_hisXs7W4HKWGxoCDoUQAvD_BwE) - [*Datasheet*](2234476.pdf)| **Pros:**<br> - Extremely Cost effective <br> - Convenient mounting profile<br> **Cons:**<br> - Simplistic Datasheet <br> - Large step size <br> - Higher voltage requirements|
 
-***Stepper motor decision:** Product #1: MikroElektronika MIKROE-1530 5V stepper motor*
+***Original Stepper motor decision:** Product #1: Fuller Motors 35BYHJ30-36A 12V Stepper Motor*
 This decision was made due to the reliability, low price point, and ubiquitous nature of this stepper motor.
 
-### **Table 1: Stepper Motor Drivers**
+>***Final Stepper motor decision:** Product #4: MikroElektronika MIKROE-1530 5V stepper motor* <br>This final decision was made due to the cost effective nature and simple mounting profile of the motor. In addition, controlling the device is made simple in terms of wiring and programming by nature of the four-wire setup. This change was made as various requirements of stepper motor drivers were considered. Another major reason for this change was the availablity and previous use of this driver in class-based labs.
+
+### **Table 3: Stepper Motor Drivers**
 
 | **Stepper Motor Driver** | **Pros/Cons** |
 |---|---|
 | **Device 1**: Onsemi NCV7708FDWR2G Double Hex Driver <br>![Image of IC](NCV7708FDWR2G.png)<br>**Cost: $5.83/unit**<br>[DigiKey](https://www.digikey.com/en/products/detail/onsemi/NCV7708FDWR2G/9829237) - [*Datasheet*](https://www.onsemi.com/pdf/datasheet/ncv7708f-d.pdf)   | **Pros:**<br> - Larger SOIC package size (easier assembly) <br> - Clear SPI datasheet<br> **Cons:**<br> - Large pin count (several unused pins)<br> - No express stepper motor drive functions (the device is not expressly designed for stepper motors).|
 | **Device 2**: Analog Devices Inc./Maxim Integrated TMC249A-SA<br>![Image of IC](TMC249A-SA.png)<br>**Cost: $16.64/unit**<br>[DigiKey](https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/TMC249A-SA/4399665) - [*Datasheet*](https://www.analog.com/media/en/technical-documentation/data-sheets/TMC249_datasheet_rev2.22.pdf) | **Pros:**<br> - Explicit and easy-to-read datasheet <br> - Serial control is a major design influence <br> **Cons:**<br> - High Unit Price (over 1/6 of budget)<br> - Large pin count (increases assembly time)|
-| **Device 3**: Infineon BTM9011EPXUMA1<br>![Image of IC](BTM9011EPXUMA1.png)<br>**Cost: $1.95/unit**<br>[DigiKey](https://www.digikey.com/en/products/detail/infineon-technologies/BTM9011EPXUMA1/25702022) - [*Datasheet*](https://www.infineon.com/dgdl/Infineon-Infineon-BTM901xEP-DS-v01_00-EN-DataSheet-v01_00-EN.pdf?fileId=8ac78c8c90530b3a01912d365ee4326f) | **Pros:**<br> - Simple H-bridge layout <br> - Extremely cost effective <br> - Small pin count<br> **Cons:**<br> - Would require multiple units to drive a stepper motor <br> - Device not specifically designed for stepper motor control|
+| **Device 3**: Infineon IFX9201SG<br>!![Image of IC](InfineonIFX.png)<br>**Cost: $1.95/unit**<br>[DigiKey](https://www.digikey.com/en/products/detail/infineon-technologies/IFX9201SGAUMA1/5415542?s=N4IgTCBcDaIJIDEAaBOMAGAjAZQOIgF0BfIA) - [*Datasheet*](Infineon-IFX9201SG-DS-v01_01.pdf) | **Pros:**<br> - Simple H-bridge layout <br> - Extremely cost effective <br> - Small pin count<br> **Cons:**<br> - Requires multiple units to drive a stepper motor <br> - Device not specifically designed for stepper motor control|
 
-***Stepper motor driver decision:** Device 3: Infineon BTM9011EPXUMA1*
+***Stepper motor driver decision:** Device 3: Infineon IFX9201SG*
 This device, though requiring multiple chips for full functionality, is more straightforward to implement. The low price point also allows the purchase of several extra units in case of design failure.
 
 ## **Microcontroller Selection**
 
 Microcontrollers were researched based on given product requirements, such as a need for at least one SPI output and one UART RX/TX pair for communication with peripheral ICs and other controllers on the team daisy chain. See the table below for further details.
 
-### **Table 3: PIC Info Table**
+### **Table 4: PIC Info Table**
 
 | **PIC Info** | **Answer** |
 | --- | --- |
@@ -59,24 +73,25 @@ Microcontrollers were researched based on given product requirements, such as a 
 | Works with MPLabX? | Yes, see [Microchip Site](https://www.microchip.com/en-us/product/pic18f27q84#Design%20Resources:~:text=T%C3%9CV%20S%C3%9CD%20certified-,MPLABX,-development%20tools%20are) |
 | Works with Microchip Code Configurator? | Yes, see MPLAB X Screenshot![MPLAB X Screenshot](image-2.png) |
 
-### **Table 4: PIC Peripherals Data**
+### **Table 5: PIC Peripherals Data**
 
 | Module | # Available | Needed | Associated Pins (or * for any) |
 | ---------- | ----------- | ------ | ------------------------------ |
 | GPIO | 25 | 4+ | * |
 | ADC | 24 | 0 | * |
 | UART | 5 | 1 | *CTS/RX:* RA4-7, RB4-7, RC6-7, *DTR, RTS, TX:* *(any) |
-| SPI | 2 | 1-2 (Indeterminate motor controller SPI configuration) | *SS, SCK, SDO:* *(any), *SDI,SCK:* RB2-3, RC3-4, *SS:* RA4-5 |
+| SPI | 2 | 1 | *CS, SCK, SDO:* *(any), *SDI,SCK:* RB2-3, RC3-4, *SS:* RA4-5 |
 | I2C | 1 | 0 | *Logic:* RB1-2, *SCL,SDA:* RC3-4, *(Any) |
 | PWM (Standalone) | 4 | 0 | *CCP:* RB*, *PWMERS, PWMIN, CCP:* RC*, *PWM1/2/3:* *(any)|
 | ICSP | Yes (3 pins) | 3 | *MCLR:* RE3, *ICSPDAT:* RB7, *ICSPCLK:* RB6 |
 
-###**Figure 1:** MPLAB X Screenshot featuring possible peripherals and pin layout
+###**Figure 1:** Final MPLAB X Screenshot featuring possible peripherals and pin layout
 
-![MPLAB X Screenshot](image-2.png)
+![MPLAB X Screenshot](MPLABX-Final.png)
+Note that only one SPI module is used- Pins RA0, RC3, RC4, and RC5 were used (see above screenshot) as the chip select, clock, serial input, and serial output lines, respectively. An additional pin, RA4, was used as a second chip select pin to control the second motor driver. Both drivers received data and clock signals from ports RC3 and RC5, respectively.
+
+>No major feedback was received in relation to the SPI subsystem, though use of previous class assignments was invaluable.
 
 ### *Microcontroller Rationale*
 
 The Microchip PIC18F27Q84 comes from a line of tried and true microcontrollers used in a variety of application. Though marketed as "recommended for automotive applications", the device explicitly supports the perfect amount of functionality for the applications listed in the introduction to this page. The presence of an extra SPI module brings peace of mind in the event that it becomes difficult to control multiple motor drivers from the same SPI line. Additionally, the device currently boasts at least ten additional I/O pins that can be used to enable a variety of "bonus" functions, such as debugging LED indicators, extra motor drivers, or sphere-indexing servo motors. The low price point is another excellent feature of the PIC18F27Q84, lending itself well to a healthy, mistake-friendly development process.
-
--BP
