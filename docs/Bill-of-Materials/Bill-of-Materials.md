@@ -9,10 +9,10 @@ The following table depicts each and every part currently needed for the design 
 
 
 **Table 1: Bill of Materials** 
-![Bill of Materials](BOM.png)
+![Bill of Materials](BOM_Final.png)
 
 
-*The above table is available* [here](Bill-of-Materials_BPollock_sorted.xlsb.xlsx).
+*The above table is available as a .xlsx file* [here](BOM_FINAL.xlsx) *and as a PDF* [here](FINALBOM.pdf).
 
 # Purchase Order
 
